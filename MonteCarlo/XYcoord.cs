@@ -29,7 +29,6 @@ namespace MonteCarlo
             double hypotenuse = Math.Sqrt(Math.Pow(coords.x, 2) + Math.Pow(coords.y, 2));
             return hypotenuse;
             }
-
     }
 
 

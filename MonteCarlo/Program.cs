@@ -12,11 +12,9 @@ namespace MonteCarlo
         {
             Console.WriteLine("Please specify the number of points");
             int numOfPoints = Convert.ToInt32(Console.ReadLine());
-
+            int insideCounter = 0;
             XYcoord[] samplePoints = new XYcoord[numOfPoints];
             Random pointSeed = new Random();
-
-            int insideCounter = 0;
 
             for(int i = 0; i<numOfPoints; i++)
             {              
@@ -26,7 +24,6 @@ namespace MonteCarlo
                 {
                     insideCounter++;
                 }
-
             }
 
             double piEstmation = 4 * ((1.0 * insideCounter) / (1.0 * numOfPoints));
@@ -34,11 +31,6 @@ namespace MonteCarlo
             Console.WriteLine($"{insideCounter} points inside of the circle\n" +
                 $"Pi estimation: {piEstmation}\n" +
                 $"Deviation: {deviation}");
-            
-
-//	Print the value from step #4 along with the absolute value of the difference between your 
-//estimate of π and Math.Pi.
-
         }
     }
 }
